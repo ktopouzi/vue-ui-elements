@@ -1,7 +1,7 @@
 {
   "name": "@ktopouzi/vue-ui-elements",
   "author": "Kimon Topouzidis",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/vue-ui-elements.common.js",
   "repository": "github:@ktopouzi/vue-ui-elements",
   "homepage": "https://github.com/ktopouzi/vue-ui-elements#readme",
