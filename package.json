@@ -3,6 +3,8 @@
   "author": "Kimon Topouzidis",
   "version": "0.0.1",
   "main": "./dist/vue-ui-elements.common.js",
+  "repository": "github:@ktopouzi/vue-ui-elements",
+  "homepage": "https://github.com/ktopouzi/vue-ui-elements#readme",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -51,9 +53,10 @@
   "keywords": [
     "vue",
     "tailwind",
-    "component Driven Development",
+    "component driven development",
     "ui",
     "library",
-    "components"
+    "components",
+    "ui elements"
   ]
 }
