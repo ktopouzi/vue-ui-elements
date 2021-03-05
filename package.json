@@ -1,9 +1,9 @@
 {
   "name": "@ktopouzi/vue-ui-elements",
   "author": "Kimon Topouzidis",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/vue-ui-elements.common.js",
-  "repository": "github:@ktopouzi/vue-ui-elements",
+  "repository": "github:ktopouzi/vue-ui-elements",
   "homepage": "https://github.com/ktopouzi/vue-ui-elements#readme",
   "scripts": {
     "serve": "vue-cli-service serve",
