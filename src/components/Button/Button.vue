@@ -1,11 +1,14 @@
 <template>
-  <button>{{ text }}</button>
+  <button class="text-red-300">{{ text }}</button>
 </template>
 
 <script>
 export default {
-  name: "VButton",
+  name: "Button",
   props: {
+    /*
+     * The button text
+     */
     text: {
       type: String,
       default: "Button text",
