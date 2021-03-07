@@ -1,4 +1,4 @@
-anguage: node_js
+language: node_js
 node_js:
   - '14.16.0'
 
@@ -25,7 +25,7 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_ACCESS_TOKEN
   target-branch: gh-pages
-  local-dir: /docs/dist
+  local-dir: docs/dist
   on:
     branch: main
 
