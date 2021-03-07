@@ -20,11 +20,15 @@ install:
 script:
   - echo "Skipping tests"
 
+before_deploy:
+  - cd dist
+
 deploy:
-  provider: pages
   skip-cleanup: true
   github-token: $GITHUB_ACCESS_TOKEN
   target-branch: main
-  local-dir: docs
   on:
     branch: main
+
+after_deploy:
+  - cd ..
