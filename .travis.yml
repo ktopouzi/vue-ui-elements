@@ -9,6 +9,9 @@ cache:
 branches:
   only:
     - main
+    
+before_install:
+  - cd ./docs
 
 install:
   - npm install
