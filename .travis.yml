@@ -9,13 +9,13 @@ cache:
 branches:
   only:
     - main
-    
+
 before_install:
   - cd ./docs
 
 install:
-  - npm install
-  - npm run generate
+  - yarn
+  - yarn generate
 
 script:
   - echo "Skipping tests"
