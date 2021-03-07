@@ -1,8 +1,9 @@
 import Vue from "vue"
-import VButton from './Button/Button.vue'
+import Button from './components/Button/Button.vue'
+import './styles/index.css'
 
 const Components = {
-    VButton,
+    Button,
 };
 
 Object.keys(Components).forEach(name => {

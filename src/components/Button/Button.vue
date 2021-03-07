@@ -1,10 +1,10 @@
 <template>
-  <button class="text-red-300">{{ text }}</button>
+<button class="text-red-300">{{ text }}</button>
 </template>
 
 <script>
 export default {
-  name: "Button",
+  name: "VButton",
   props: {
     /*
      * The button text
@@ -16,5 +16,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
