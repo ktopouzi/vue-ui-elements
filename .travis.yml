@@ -9,13 +9,13 @@ cache:
 branches:
   only:
     - main
-
+    
 before_install:
   - cd ./docs
 
 install:
-  - yarn
-  - yarn generate
+  - npm install
+  - npm run generate
 
 script:
   - echo "Skipping tests"
@@ -24,7 +24,7 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_ACCESS_TOKEN
-  target-branch: gh-pages
+  target-branch: main
   local-dir: docs
   on:
     branch: main
