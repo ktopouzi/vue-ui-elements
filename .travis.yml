@@ -20,9 +20,6 @@ install:
 script:
   - echo "Skipping tests"
 
-before_deploy:
-  - cd dist
-
 deploy:
   provider: pages
   skip-cleanup: true
@@ -31,5 +28,3 @@ deploy:
   on:
     branch: main
 
-after_deploy:
-  - cd ..
