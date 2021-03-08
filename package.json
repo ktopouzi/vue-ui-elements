@@ -1,81 +1,46 @@
 {
-  "name": "@ktopouzi/vue-ui-elements",
-  "author": "Kimon Topouzidis",
-  "version": "0.0.3",
-  "main": "./dist/vue-ui-elements.common.js",
-  "repository": "github:ktopouzi/vue-ui-elements",
-  "homepage": "https://github.com/ktopouzi/vue-ui-elements#readme",
+  "name": "vue-ui-elements",
+  "version": "0.0.4",
+  "description": "",
+  "main": "dist/vue-ui-elements.ssr.js",
+  "browser": "dist/vue-ui-elements.esm.js",
+  "module": "dist/vue-ui-elements.esm.js",
+  "unpkg": "dist/vue-ui-elements.min.js",
+  "files": [
+    "dist/*",
+    "src/**/*.vue"
+  ],
+  "sideEffects": false,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-rollup": "rollup -c --environment BUILD:production",
-    "build-lib": "vue-cli-service build --target lib --name vue-ui-elements ./src/index.js",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-cli-service serve dev/serve.js",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-  "dependencies": {
-    "@nuxt/content-theme-docs": "^0.10.2",
-    "@vue/compiler-sfc": "^3.0.7",
-    "core-js": "^3.6.5",
-    "nuxt": "^2.15.2",
-    "rollup": "^2.40.0",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-vue": "^6.0.0",
-    "vue": "^2.6.11"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@vue/cli-plugin-babel": "^4.5.10",
+    "@vue/cli-service": "^4.5.10",
+    "cross-env": "^7.0.3",
+    "minimist": "^1.2.5",
+    "rollup": "^2.36.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^5.1.9",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
   },
   "peerDependencies": {
     "vue": "^2.6.12"
   },
-  "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.2",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^17.1.0",
-    "@rollup/plugin-node-resolve": "^11.2.0",
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "autoprefixer": "^9.8.6",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "sideEffects": true,
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
-  "keywords": [
-    "vue",
-    "tailwind",
-    "component driven development",
-    "ui",
-    "library",
-    "components",
-    "ui elements"
-  ]
+  "engines": {
+    "node": ">=12"
+  }
 }
