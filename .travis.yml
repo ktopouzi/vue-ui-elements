@@ -28,4 +28,3 @@ deploy:
   local-dir: docs/dist
   on:
     branch: main
-
