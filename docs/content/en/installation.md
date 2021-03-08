@@ -1,7 +1,7 @@
 ---
 title: Installation
 description: A basic description for the package installation guide
-position: 1
+position: 2
 category: get-started
 ---
 
